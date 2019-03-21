@@ -1,0 +1,19 @@
+
+.grid div[class^="col"] {
+    border: 1px solid black;
+    background: white;
+    text-align: center;
+}
+body {
+    min-height: 100%;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: navy;
+    color: #ffffff;
+    text-align: center;
+}
+
