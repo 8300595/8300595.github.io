@@ -3,8 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link reL="stylesheet" href="css/yourgov.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><img height="50" src="1200px-ACT_Government_logo.svg.png" width="100"></a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Your.Gov <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="defence.html">Department of Defence</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="energy.html">Department of Environment & Energy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="communication.html">Department of Communication and the Arts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="human%20services.html">Department of Human Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="parliment.html">Parliament House</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="grid-container">
+    <div class="item2" style="font-size: larger">
+        Department of environment & energy
+    </div>
+    <div class="item4" id="demo">
+        The Department designs and implements Australian Government policy and programs to protect
+        and conserve the environment, water and heritage, promote climate action, and provide
+        adequate, reliable and affordable energy.
+    </div>
+    <div class="item5" style="padding-top: 30px" >
+        <p>if the power usage goes above 80% additional power is required</p>
+        <button id="activate">display power usage</button>
+        <button id="manage">activate additional power station</button>
+
+        <p id="power"></p>
+        <p id="power2"></p>
+
+        <script type="text/javascript">
+            document.getElementById("activate").onclick = function () {tick()};
+
+            var func_running = false;
+            var func_managed = false;
+            var func_reverse = false;
+            var update1 = 0;
+            var update2 = 0;
+            var update3 = 0;
+
+            function tick() {
+                clearInterval(update2);
+                if(func_running == false) {
+                    func_running = true;
+                    update1 = setInterval(timer, 1000);
+                }
+
+
+                function timer() {
+                    var min = 80;
+                    var max = 100;
+                    var random = Math.random() * (+max - +min) + +min;
+                    var output = random.toFixed(2);
+
+                    document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
+                }
+            }
+
+            document.getElementById("manage").onclick = function () {tock()};
+
+            function tock() {
+                clearInterval(update1);
+                clearInterval(update3);
+                func_reverse = false;
+                if( func_managed == false) {
+                    func_managed = true;
+                    update2 = setInterval(timer, 1000);
+                    document.getElementById("manage").id = "done";
+                    document.getElementById("done").onclick = function () {swap_back()};
+                }
+
+
+                function timer() {
+                    var min = 25;
+                    var max = 50;
+                    var random = Math.random() * (+max - +min) + +min;
+                    var output = random.toFixed(2);
+
+                    document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
+                }
+            }
+
+            function swap_back() {
+                clearInterval(update2);
+                func_managed = false;
+                if( func_reverse == false) {
+                    func_reverse = true;
+                    update3 = setInterval(timer, 1000);
+                    document.getElementById("done").id = "manage";
+                    document.getElementById("manage").onclick = function () {tock()};
+                }
+
+
+                function timer() {
+                    var min = 80;
+                    var max = 100;
+                    var random = Math.random() * (+max - +min) + +min;
+                    var output = random.toFixed(2);
+
+                    document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
+                }
+            }
+        </script>
+    </div>
+
+
+</div>
+
+
+
+<div class="footer">
+    <p>© 2019 "Australian" "Government"</p>
+</div>
 </body>
+
 </html>

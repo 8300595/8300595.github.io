@@ -12,7 +12,9 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: navy;
+    min-height: 50px;
+    background-color:navy;
+    background-image: url("/Australian-Parliament-House-at-night-L006101517.jpg");
     color: #ffffff;
     text-align: center;
 }
@@ -25,8 +27,8 @@ div.relative {
 .grid-container {
    display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: auto auto auto ;
-    grid-row-gap: 5px;
+    grid-template-rows: 20% 25% 50% 5% ;
+    grid-row-gap: 15px;
 }
 
 .item1 {
@@ -51,4 +53,17 @@ div.relative {
     grid-row: 3;
     alignment: center;
 }
+
+.item6 {
+    grid-column: 1/span 3;
+    grid-row: 4;
+}
+.item7 {
+    grid-column: 1/span 3;
+    grid-row: 4;
+    text-align: center;
+    color: #ffffff;
+    column-width: ;
+}
+
 
