@@ -9,7 +9,94 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      //document.getElementById("activate").onclick = function () {tick()};
 
+        var func_running = false;
+        var func_managed = false;
+        var func_reverse = false;
+        var update1 = 0;
+        var update2 = 0;
+        var update3 = 0;
+
+       // document.getElementById("activate").onclick = function () {tock()}
+
+        function tick() {
+            clearInterval(update2);
+            if(func_running == false) {
+                func_running = true;
+                update1 = setInterval(timer, 1000);
+            }
+
+
+            function timer() {
+                var min = 80;
+                var max = 100;
+                var random = Math.random() * (+max - +min) + +min;
+                var output = random.toFixed(2);
+
+                document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
+            }
+        }
+      function enter() {
+          var x, text;
+          x = document.getElementById("pin").value;
+          if (x == 1234) {
+              tick();
+              text= "<button id=\"manage\" onclick=\"tock()\">activate additional power station</button>";
+          } else {
+              text = "<img class='img-fluid' src=\"images/denied.png\">";
+          }
+          document.getElementById("thingy").innerHTML = text;
+      }
+        //document.getElementById("manage").onclick = function () {tock()};
+
+        function tock() {
+            clearInterval(update1);
+            clearInterval(update3);
+            func_reverse = false;
+            if( func_managed == false) {
+                func_managed = true;
+                update2 = setInterval(timer, 1000);
+                document.getElementById("manage").innerHTML = "deactivate additional power station";
+                document.getElementById("manage").id = "done";
+                document.getElementById("done").onclick = function () {swap_back()};
+
+            }
+
+
+            function timer() {
+                var min = 25;
+                var max = 50;
+                var random = Math.random() * (+max - +min) + +min;
+                var output = random.toFixed(2);
+
+                document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
+            }
+        }
+
+        function swap_back() {
+            clearInterval(update2);
+            func_managed = false;
+            if( func_reverse == false) {
+                func_reverse = true;
+                update3 = setInterval(timer, 1000);
+                document.getElementById("done").innerHTML = "activate additional power station";
+                document.getElementById("done").id = "manage";
+                document.getElementById("manage").onclick = function () {tock()};
+            }
+
+
+            function timer() {
+                var min = 80;
+                var max = 100;
+                var random = Math.random() * (+max - +min) + +min;
+                var output = random.toFixed(2);
+
+                document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -49,105 +136,43 @@
 </nav>
 
 <div class="grid-container">
+    </div>
     <div class="item2" style="font-size: larger">
         Department of environment & energy
     </div>
-    <div class="item4" id="demo">
-        The Department designs and implements Australian Government policy and programs to protect
+
+<div class="item4">
+    <img src="images/power.png" height="100%" width="100%" style="padding: 10%"/>
+</div>
+
+    <div class="item5" id="demo">
+        <p style="text-align: left">The Department designs and implements Australian Government policy and programs to protect
         and conserve the environment, water and heritage, promote climate action, and provide
-        adequate, reliable and affordable energy.
+            adequate, reliable and affordable energy.</p>
+
     </div>
     <div class="item5" style="padding-top: 30px" >
+        <p>enter password to access power grid</p>
+        <input id="pin" type="password">
+        <p id="feedback"></p>
+        <button id="activate" onclick="enter()">authenticate & display power usage</button>
         <p>if the power usage goes above 80% additional power is required</p>
-        <button id="activate">display power usage</button>
-        <button id="manage">activate additional power station</button>
-
+        <p id="thingy"></p>
         <p id="power"></p>
         <p id="power2"></p>
 
-        <script type="text/javascript">
-            document.getElementById("activate").onclick = function () {tick()};
 
-            var func_running = false;
-            var func_managed = false;
-            var func_reverse = false;
-            var update1 = 0;
-            var update2 = 0;
-            var update3 = 0;
-
-            function tick() {
-                clearInterval(update2);
-                if(func_running == false) {
-                    func_running = true;
-                    update1 = setInterval(timer, 1000);
-                }
-
-
-                function timer() {
-                    var min = 80;
-                    var max = 100;
-                    var random = Math.random() * (+max - +min) + +min;
-                    var output = random.toFixed(2);
-
-                    document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
-                }
-            }
-
-            document.getElementById("manage").onclick = function () {tock()};
-
-            function tock() {
-                clearInterval(update1);
-                clearInterval(update3);
-                func_reverse = false;
-                if( func_managed == false) {
-                    func_managed = true;
-                    update2 = setInterval(timer, 1000);
-                    document.getElementById("manage").id = "done";
-                    document.getElementById("done").onclick = function () {swap_back()};
-                }
-
-
-                function timer() {
-                    var min = 25;
-                    var max = 50;
-                    var random = Math.random() * (+max - +min) + +min;
-                    var output = random.toFixed(2);
-
-                    document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
-                }
-            }
-
-            function swap_back() {
-                clearInterval(update2);
-                func_managed = false;
-                if( func_reverse == false) {
-                    func_reverse = true;
-                    update3 = setInterval(timer, 1000);
-                    document.getElementById("done").id = "manage";
-                    document.getElementById("manage").onclick = function () {tock()};
-                }
-
-
-                function timer() {
-                    var min = 80;
-                    var max = 100;
-                    var random = Math.random() * (+max - +min) + +min;
-                    var output = random.toFixed(2);
-
-                    document.getElementById("power").innerHTML = "power grid usage : " + output + "%";
-                }
-            }
-        </script>
+    </div>
+    <div class="footer">
+        <p>© 2019 "Australian" "Government"</p>
     </div>
 
-
 </div>
 
 
 
-<div class="footer">
-    <p>© 2019 "Australian" "Government"</p>
-</div>
+
+
 </body>
 
 </html>
