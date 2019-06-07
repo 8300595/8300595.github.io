@@ -3,8 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link reL="stylesheet" href="css/yourgov.css">
+    <link rel="stylesheet" href="css/communication.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/communication.js"></script>
+    <link rel="stylesheet" href="css/services.css">
 
+
+</head>
+<body onload="setInterval(nbn,5000), setInterval(adsl,5000), setInterval(tv,5000), setInterval(phone,5000), setInterval(radio,5000), setInterval(fox,5000)">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><img height="50" src="images/ACT_Government_logo.png" width="100"></a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Your.Gov <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="defence.html">Department of Defence</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="energy.html">Department of Environment & Energy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="communication.html">Department of Communication and the Arts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="human%20services.html">Department of Human Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="parliment.html">Parliament House</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="grid-container">
+    <div class="side_image_1">
+        <img class="img-fluid" src="images/icons/services.png" height="100%" width="100%"/>
+
+    </div>
+
+    <div class="Banner">
+        <img class=img-fluid src="images/Parliament%20house%20night.jpg" height="100%" width="100%"/>
+    </div>
+
+    <div class="item2">
+        Department of Human Services
+    </div>
+
+    <div class="item4">
+        <p>
+        the main role of the Department is to provide for all Australian Citizens with services
+            to cater for the various needs of the diverse population.
+            In particular, DHS is responsible for the management of 3 main government funded monetary services provided
+            for Australians.
+        </p>
+
+        <img class="img-fluid" src="images/population.jpg" height="467" width="700"/></div>
+
+    <
+
+</div>
+<div class="grid-container_2">
+
+    <div class="item_nbn">
+
+        <img class="img-fluid" src="images/icons/centerlink.PNG" height="81" width="397"/>
+
+        <p>Centrelink, is a Department of Human Services master program of the Australian Government.
+        It delivers a range of government payments and services for retirees, the unemployed, families, carers, parents,
+        people with disabilities, Indigenous Australians, students, apprentices and people from diverse cultural and
+        linguistic backgrounds, and provides services at times of major change.</p>
+        <a href="https://en.wikipedia.org/wiki/Centrelink" target="_blank">Source</a>
+    </div>
+
+    <div class="item_adsl">
+        <img class="img-fluid" src="images/icons/medicare.PNG" height="81" width="397"/>
+
+        <p>Medicare is the primary funder of health care in Australia, funding primary health care for Australian
+            citizens and permanent residents including Norfolk Island. Residents are entitled to a rebate for treatment
+            \from medical practitioners, eligible midwives, nurse practitioners and allied health professionals who have
+            been issued a Medicare provider number, and can also obtain free treatment in public hospitals. </p>
+        <a href="https://en.wikipedia.org/wiki/Medicare_(Australia)" target="_blank">Source</a>
+    </div>
+
+    <div class="item_tv">
+        <img class="img-fluid" src="images/icons/child%20support.PNG" height="81" width="397"/>
+
+        <p>Child support provides funding for children with split families, ensuring separated parents or single parent
+            families are provided with the nessesary funding required to support their children. Child support replaced
+            the Child Support Agency in 2011 and is manged by DHS. </p>
+    </div>
+</div>
+<div class="grid-container4">
+
+    <div class="info">
+        <b style="font-size: larger"> Personal Medical Records</b>
+        <p style="font-size: medium"> Below you can check personal medical records and update any inaccurate information </p>
+
+    </div>
+
+    <div class="use">
+        <input type="text" placeholder="username" style="width: 100%">
+    </div>
+
+    <div class="pass">
+        <input type="password" placeholder="password" style="width: 100%">
+    </div>
+
+    <div class="email">
+        <input type="text" placeholder="email" style="width: 92.3%">
+    </div>
+
+    <div class="fname">
+        <input type="text" placeholder="first name" style="width: 100%">
+
+    </div>
+
+    <div class="sname">
+        <input type="text" placeholder="surname" style="width: 100%">
+    </div>
+
+    <div class="date">
+        <input type="date" placeholder="Date" style="width: 100%">
+    </div>
+
+    <div class="gen">
+        <select id="gen" class="form-control">
+            <option selected value="0">Select one...</option>
+            <option value="1">male</option>
+            <option value="1">female</option>
+            <option value="1">other</option>
+        </select>
+    </div>
+
+    <div class="home">
+        <input type="number" placeholder="home" style="width: 100%">
+    </div>
+
+    <div class="mob">
+        <input type="number" placeholder="mobile" style="width: 100%">
+    </div>
+
+    <div class="medi">
+        <input type="number" placeholder="medicare number" style="width: 100%">
+    </div>
+
+    <div class="heal">
+        <input type="number" placeholder="health" style="width: 100%">
+    </div>
+
+    <div class="gp">
+        <input type="text" placeholder="local GP" style="width: 100%">
+    </div>
+
+    <div class="sub">
+        <button onclick="refresh()">Submit Changes</button>
+    </div>
+
+
+<!-- labels-->
+
+
+    <div class="use2">
+        <b style="font-size: large">Username</b>
+    </div>
+
+    <div class="pass2">
+        <b style="font-size: large">password</b>
+    </div>
+
+    <div class="email2">
+        <b style="font-size: large">Email</b>
+    </div>
+
+    <div class="fname2">
+        <b style="font-size: large">First name</b>
+
+    </div>
+
+    <div class="sname2">
+        <b style="font-size: large">Surname</b>
+    </div>
+
+    <div class="date2">
+        <b style="font-size: large">Date of Birth</b>
+    </div>
+
+    <div class="gen2">
+        <b style="font-size: large">Gender</b>
+    </div>
+
+    <div class="home2">
+        <b style="font-size: large">home phone number</b>
+    </div>
+
+    <div class="mob2">
+        <b style="font-size: large">mobile phone number</b>
+    </div>
+
+    <div class="medi2">
+        <b style="font-size: large">medicare number</b>
+    </div>
+
+    <div class="heal2">
+        <b style="font-size: large">private healthcare number</b>
+    </div>
+
+    <div class="gp2">
+        <b style="font-size: large">local general practitioner</b>
+    </div>
+
+    <div class="sub2">
+        <b style="font-size: large">submit any changes you made:</b>
+    </div>
+
+
+</div>
+
+<div class="grid-container">
+    <div class="footer">
+        <p>© 2019 "Australian" "Government"</p>
+    </div>
+</div>
 </body>
-</html>

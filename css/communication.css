@@ -1,0 +1,49 @@
+
+.grid-container_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+}
+
+.item_title{
+    grid-column: 1/span 3;
+    grid-row: 1;
+    color: white;
+    background-color: #002752;
+    padding-left: 2%;
+    text-align: left;
+}
+
+.item_nbn {
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.item_adsl {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.item_tv {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.item_phone {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.item_radio {
+    grid-column: 2;
+    grid-row: 3;
+}
+.item_foxtel {
+    grid-column: 3;
+    grid-row: 3;
+}

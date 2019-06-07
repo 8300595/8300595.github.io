@@ -3,8 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link reL="stylesheet" href="css/yourgov.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/parliament.css">
+    <script src="js/voting.js"></script>
+
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><img height="50" src="images/ACT_Government_logo.png" width="100"></a>
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Your.Gov <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="defence.html">Department of Defence</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="energy.html">Department of Environment & Energy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="communication.html">Department of Communication and the Arts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="human%20services.html">Department of Human Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="parliment.html">Parliament House</a>
+            </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input aria-label="Search" class="form-control mr-sm-2" placeholder="Search" type="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<div class="grid-container">
+    <div class="Banner">
+        <img class=img-fluid src="images/Parliament%20house%20night.jpg" height="100%" width="100%"/>
+    </div>
+    <div class="side_image_1">
+
+        <img class="img-fluid" src="images/icons/parliament.png" height="100%" width="100%"/>
+    </div>
+    <div class="item2">
+        Parliament House
+    </div>
+
+    <div class="item4">
+        <b style="font-size: larger">What we do:</b>
+        <p>
+            Parliament makes laws, authorises the Government to spend public money, scrutinises government activities,
+            and is a forum for debate on national issues. Parliament House is the home of Australia's Parliament.
+            The 226 members of parliament meet here to represent the Australian people and make decisions for the nation.
+        </p>
+        <img class="img-fluid" src="images/red room.jpg" height="80%" width="80%" style=""/>
+    </div>
+</div>
+
+<div class="grid-container3">
+
+    <div class="heading">
+        <b style="font-size: larger"> Australian Federal Election Voting Form 2019 </b>
+    </div>
+    <div class="dob">
+        <p style="color: #002752">DOB:</p>
+        <input type="date" class="form-control" placeholder="Date of Birth" id="DOB" required>
+        <p id="dob_err"></p>
+    </div>
+
+    <div class="name">
+        <p style="color: #002752">Name:</p>
+        <input type="text" class="form-control" placeholder="Full Name" id="name" required>
+        <p id="name_err"></p>
+    </div>
+    <div class="email">
+        <p style="color: #002752">Email:</p>
+        <input type="text" class="form-control" placeholder="Email Address" id="email" required>
+        <p id="email_err"></p>
+    </div>
+
+    <div class="break">
+
+    </div>
+    <div class="label_1">
+        <p style="color: #002752">1st preference</p>
+    </div>
+    <div class="label_2">
+        <p style="color: #002752">2nd preference</p>
+    </div>
+    <div class="label_3">
+        <p style="color: #002752">3rd preference</p>
+    </div>
+    <div class="label_4">
+        <p style="color: #002752">4th preference</p>
+    </div>
+    <div class="select_1">
+        <select id="can1" class="form-control" required>
+            <option selected value="0">Select one...</option>
+            <option value="1"> Scott Morrison</option>
+            <option value="2">Bill Shorten</option>
+            <option value="3">Richard Di Natale</option>
+            <option value="4">Pauline Hanson</option>
+        </select>
+    </div>
+    <div class="select_2">
+        <select id="can2" class="form-control" required>
+            <option selected value="0">Select one...</option>
+            <option value="1"> Scott Morrison</option>
+            <option value="2">Bill Shorten</option>
+            <option value="3">Richard Di Natale</option>
+            <option value="4">Pauline Hanson</option>
+        </select>
+    </div>
+    <div class="select_3">
+        <select id="can3" class="form-control" required>
+            <option selected value="0">Select one...</option>
+            <option value="1"> Scott Morrison</option>
+            <option value="2">Bill Shorten</option>
+            <option value="3">Richard Di Natale</option>
+            <option value="4">Pauline Hanson</option>
+        </select>
+    </div>
+    <div class="select_4">
+    <select id="can4" class="form-control" required>
+        <option selected value="0">Select one...</option>
+        <option value="1"> Scott Morrison</option>
+        <option value="2">Bill Shorten</option>
+        <option value="3">Richard Di Natale</option>
+        <option value="4">Pauline Hanson</option>
+    </select>
+</div>
+
+    <div class="err_1">
+        <p id="fix1"></p>
+    </div>
+    <div class="err_2">
+        <p id="fix2"></p>
+    </div>
+    <div class="err_3">
+        <p id="fix3"></p>
+    </div>
+    <div class="err_4">
+        <p id="fix4"></p>
+    </div>
+
+    <div class="submit" style="text-align: center">
+        <button onclick="submit()">Cast Your Vote</button>
+        <p id="submit"></p>
+    </div>
+</div>
+
+<div class="grid-container">
+    <div class="footer">
+        <p>© 2019 "Australian" "Government"</p>
+    </div>
+</div>
+
+
 </body>
+
 </html>

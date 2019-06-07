@@ -1,0 +1,95 @@
+.grid-container3 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 70%;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: white;
+    color: #bd2130;
+    row-gap: 2%;
+}
+
+.heading{
+    grid-column: 1 /span 2;
+    grid-row:1;
+}
+.dob {
+    grid-column: 1 /span 2;
+    grid-row:2;
+}
+
+.name{
+    grid-column: 1 /span 2;
+    grid-row:3;
+}
+
+.email{
+    grid-column: 1 /span 2;
+    grid-row:4;
+}
+.break{
+    grid-column: 1 /span 2;
+    grid-row: 5;
+    background-color: #002752;
+    height: 25px;
+}
+
+
+.label_1{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.label_2{
+    grid-column: 1;
+    grid-row: 8;
+}
+
+.label_3{
+    grid-column: 1;
+    grid-row: 10;
+}
+
+.label_4{
+    grid-column: 1;
+    grid-row: 12;
+}
+
+.select_1{
+    grid-column: 2;
+    grid-row: 6;
+}
+.select_2{
+    grid-column: 2;
+    grid-row: 8;
+}
+.select_3{
+    grid-column: 2;
+    grid-row: 10;
+}
+.select_4{
+    grid-column: 2;
+    grid-row: 12;
+}
+.submit{
+    grid-column: 1 /span 2;
+    grid-row: 14;
+}
+
+.err_1{
+    grid-column: 2;
+    grid-row: 7;
+}
+.err_2 {
+    grid-column: 2;
+    grid-row: 9;
+}
+.err_3{
+    grid-column: 2;
+    grid-row: 11;
+}
+.err_4{
+    grid-column: 2;
+    grid-row: 13;
+}
